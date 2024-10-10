@@ -1,6 +1,6 @@
 ### Source
 
-> https://laracasts.com/series/livewire-3-from-scratch/episodes/7
+> https://laracasts.com/series/livewire-3-from-scratch/episodes/8
 
 ### This Git
 
@@ -37,3 +37,7 @@
 ## Individual Article
 
 > php artisan make:livewire show-article
+
+### search Results
+
+> php artisan make:livewire search-results
