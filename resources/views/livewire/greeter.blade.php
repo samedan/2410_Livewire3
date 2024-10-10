@@ -1,15 +1,29 @@
 <div>
-    <div>
-        
-        Hellp, {{$name}}
-    </div>
+    
     <form 
-    wire:submit="changeName(document.querySelector('#newName').value)"
+    wire:submit="changeGreeting()"
     >
     <div>
-        <input type="text" 
+        <select type="text" 
         id='newName'
-        class="block w-full border rounded-md bg-gray-700 text-white">
+        class="p-4 border rounded-md bg-gray-700 text-white"
+        {{-- "name" comed from Greeter.php --}}
+        wire:model.fill="greeting"
+        ><option value="Hello">Hello</option>
+        ><option value="Hi">Hi</option>
+        ><option value="Hey">Hey</option>
+        ><option value="Howgy" selected>Howgy</option>
+    </select>
+        <input type="text" 
+        class="p-4 border rounded-md bg-gray-700 text-white"
+        {{-- "name" comed from Greeter.php --}}
+        wire:model="name"
+        >
+    </div>
+    <div>
+        @error('name')
+            {{$message}}
+        @enderror
     </div>
     <div class="mt-2">
         <button 
@@ -20,4 +34,9 @@
 
     </div>
 </form>
+@if($greetingMessage != '')
+    <div class="mt-5">            
+        {{$greetingMessage}}
+    </div>
+@endif
 </div>
