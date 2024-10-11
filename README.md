@@ -46,3 +46,7 @@
 
 > app/Livewire/Search.php class: search:clear-results
 > app.blade.php add Alpine code <body x-data x-on:click="">
+
+### First page Iterating Collections
+
+> php artisan make:livewire article-index
