@@ -41,3 +41,8 @@
 ### search Results
 
 > php artisan make:livewire search-results
+
+### Events in Livewire
+
+> app/Livewire/Search.php class: search:clear-results
+> app.blade.php add Alpine code <body x-data x-on:click="">

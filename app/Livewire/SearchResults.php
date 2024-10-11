@@ -13,6 +13,11 @@ class SearchResults extends Component
     public $show = []; // used in 'search.blade.php' and 'search-results.blade.php'
     public function render()
     {
-        return view('livewire.search-results');
+            return view('livewire.search-results');
     }
+
+    // // X button event to clear the results box
+    // public function clear() {
+    //     $this->dispatch('search:clear-results');
+    // }
 }
